@@ -23,20 +23,19 @@ handlePress() {
         <Image 
         source={require('./imgs/small-logo-white.png')}/>
         <View style={styles.buttonBox}>
-          <TouchableHighlight onPress={this.handlePress.bind(this)}>
-            <Text>Login</Text>
+          <TouchableHighlight style={styles.button} onPress={() => this.onPress(this)} value='signup'>
+            <Text style={styles.text}>Sign up</Text>
           </TouchableHighlight>
-          <TouchableHighlight onPress={this.handlePress.bind(this)}>
-            <Text>Sign up</Text>
+          <TouchableHighlight style={styles.button} onPress={this.handlePress.bind(this)}>
+            <Text style={styles.text} activeClassName='selected'>Login</Text>
           </TouchableHighlight>
+          
         </View>
       </ImageBackground>
       </View>
     );
   }
 }
-
-
 
 
 const styles = StyleSheet.create ({
@@ -64,8 +63,17 @@ const styles = StyleSheet.create ({
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    
+    justifyContent: 'space-around',
   },
+  text: {
+    color:'white',
+    textAlign: 'center'
+  },
+  button: {
+    width:'50%',
+    padding: 20,
+    
+  }
 })
 
 // export default StackNavigator ({

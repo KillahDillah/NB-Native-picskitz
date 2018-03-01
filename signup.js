@@ -25,7 +25,19 @@ export default class Signup extends Component {
               <TextInput type="TextInput" name="myTextInput">
                 <Text>Form</Text>
               </TextInput>   
+            </View>
+            <View style={styles.entryBox}>
+              <Text>Username</Text>   
+              <TextInput type="TextInput" name="myTextInput">
+                <Text>Form</Text>
+              </TextInput>   
               </View>
+            <View style={styles.entryBox}>
+              <Text>Email</Text>   
+              <TextInput type="TextInput" name="myTextInput">
+                <Text>Form</Text>
+              </TextInput>   
+            </View>
               <Text>Don't have an account?</Text>
             </View>
 
@@ -36,3 +48,31 @@ export default class Signup extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create ({
+  login: {
+    
+  },
+  infoBox: {
+    position: 'absolute',
+    top: '40%',
+    width: '100%',
+    padding: 20,
+    bottom: 0,
+  },
+  entryBoxLogin:{
+    height: '50%',
+    
+  },
+  entryBox: {
+    borderColor: 'lightgray',
+    borderWidth: 1 ,
+    borderStyle: 'solid',
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    padding: 10,
+    borderRadius: 1,
+    
+  }
+
+})

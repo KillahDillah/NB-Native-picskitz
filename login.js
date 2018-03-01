@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput, Input, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Input, TouchableHighlight } from 'react-native';
 import glamorous from 'glamorous-native';
 import Header from './header';
 
@@ -31,7 +31,7 @@ export default class Login extends Component {
               </TextInput>   
             </View>
             <Text>Don't have an account?</Text>
-            <Button title='submit' name='arrow'>Submit</Button>
+            <TouchableHighlight title='submit' name='arrow'><Text>Submit</Text></TouchableHighlight>
           </View>
 
             <Text>Form ends</Text>
@@ -57,8 +57,6 @@ const styles = StyleSheet.create ({
   },
   entryBoxLogin:{
     height: '50%',
-    color:'purple'
-    
   },
   entryBox: {
     borderColor: 'lightgray',
